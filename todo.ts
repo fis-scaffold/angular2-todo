@@ -6,7 +6,8 @@ import {TodoStore} from './deps/services/TodoStore';
 @Component({
     selector: 'todo-app',
     templateUrl: __uri('todo.html'),
-    directives: [FORM_DIRECTIVES, CORE_DIRECTIVES]
+    directives: [FORM_DIRECTIVES, CORE_DIRECTIVES],
+    providers: [TodoStore]
 })
 class TodoApp {
     todoStore: TodoStore;
@@ -70,5 +71,5 @@ class TodoApp {
 }
 
 export function run() {
-  bootstrap(TodoApp, [TodoStore]);
+  bootstrap(TodoApp);
 }
