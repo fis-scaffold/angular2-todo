@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+  <title>Todo App</title>
+  <link rel="stylesheet" href="deps/css/main.css" media="screen" title="no title" charset="utf-8">
+  <script src="./system.js"></script>
+  <script src="./bundles/angular2.dev.js"></script>
+  <script>
+  System.import('./todo.ts').then(function(App) {
+    App.run();
+  }, console.error.bind(console));
+  </script>
+</head>
+<body>
+  <todo-app>Loading...</todo-app>
+</body>
+</html>
